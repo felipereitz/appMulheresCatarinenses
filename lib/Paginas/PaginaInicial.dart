@@ -19,61 +19,27 @@ class PaginaInicial extends StatelessWidget {
                   height: 100,
                 ),
 
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Card(
-                    color:Colors.red[100],
-                    elevation: 3,
-                    child: ListTile(
-                      title: Text(
-                        'Como seria um Mundo Ideal para as Mulheres?',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/PaginaComoDeveriaSer');
-                      },
-                    ),
-                  ),
-                ),
+                itemListaPaginas(context,
+                    'Dados violência contra mulher em SC',
+                    (Colors.greenAccent[100])!,
+                    '/PaginaDadosViolencia'),
 
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Card(
-                    elevation: 3,
-                    child: ListTile(
-                      title: Text(
-                        'Colaboradores',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/PaginaColaboradores');
-                      },
-                    ),
-                  ),
-                ),
-                SizedBox(height: 100,),
-                ElevatedButton(
-                    child: Text('Mostrar Logo da Escola'),
-                    onPressed: () {
-                      Provider.of<PaginaInicialProvider>(context, listen: false)
-                          .logostate = !Provider.of<PaginaInicialProvider>(
-                              context,
-                              listen: false)
-                          .logostate;
-                    }),
-                SizedBox(
-                  height: 30,
-                ),
-                Provider.of<PaginaInicialProvider>(context, listen: false)
-                        .logostate
-                    ? Container(
-                        width: 200,
-                        height: 200,
-                        child:
-                            Image(image: AssetImage('assets/imagens/logo.png')))
-                    : Container()
+                itemListaPaginas(context,
+                    'Resultado pesquisa com mulheres catarinenses',
+                    (Colors.red[100])!,
+                    '/PaginaResultadoEntrevistas'),
+
+                itemListaPaginas(context,
+                    'Como seria um Mundo Ideal para as Mulheres?',
+                    (Colors.blue[100])!,
+                    '/PaginaComoDeveriaSer'),
+
+                itemListaPaginas(context,
+                    'Colaboradores',
+                    (Colors.orangeAccent[100])!,
+                    '/PaginaColaboradores'),
+
+
               ],
             );
           },
@@ -81,4 +47,26 @@ class PaginaInicial extends StatelessWidget {
       ),
     );
   }
+
+  Padding itemListaPaginas(BuildContext context, String titulo, Color cor, String pagina) {
+    return Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Card(
+                  color:cor,
+                  elevation: 3,
+                  child: ListTile(
+                    title: Text(
+                      titulo,
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.w600),
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, pagina);
+                    },
+                  ),
+                ),
+              );
+  }
+
+
 }

@@ -6,6 +6,8 @@ import 'package:mulherescatarinenses/Paginas/PaginaInicial.dart';
 import 'Funcoes/Inicializacao/ListaDeProviders.dart';
 import 'Funcoes/Inicializacao/hiveInicialization.dart';
 import 'Paginas/PaginaComoDeveriaSer.dart';
+import 'Paginas/PaginaDadosViolencia.dart';
+import 'Paginas/PaginaResultadoEntrevistas.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,7 +35,11 @@ class Meuapp extends StatelessWidget {
       routes: {
         '/PaginaInicial': (context) => PaginaInicial(),
         '/PaginaColaboradores': (context)=> PaginaColaboradores(),
-        '/PaginaComoDeveriaSer': (context)=>PaginaComoDeveriaSer()
+        '/PaginaComoDeveriaSer': (context)=>PaginaComoDeveriaSer(),
+        '/PaginaDadosViolencia': (context)=>PaginaDadosViolencia(),
+        '/PaginaResultadoEntrevistas': (context)=>PaginaResultadoEntrevistas()
+
+        //PaginaResultadoEntrevistas
 
       },
       initialRoute: '/PaginaInicial',
