@@ -5,6 +5,8 @@ import 'package:mulherescatarinenses/Paginas/PaginaInicial.dart';
 
 import 'Funcoes/Inicializacao/ListaDeProviders.dart';
 import 'Funcoes/Inicializacao/hiveInicialization.dart';
+import 'Paginas/LinhaDoTempo.dart';
+import 'Paginas/PaginaCartilhaPdf.dart';
 import 'Paginas/PaginaComoDeveriaSer.dart';
 import 'Paginas/PaginaDadosViolencia.dart';
 import 'Paginas/PaginaResultadoEntrevistas.dart';
@@ -37,9 +39,11 @@ class Meuapp extends StatelessWidget {
         '/PaginaColaboradores': (context)=> PaginaColaboradores(),
         '/PaginaComoDeveriaSer': (context)=>PaginaComoDeveriaSer(),
         '/PaginaDadosViolencia': (context)=>PaginaDadosViolencia(),
-        '/PaginaResultadoEntrevistas': (context)=>PaginaResultadoEntrevistas()
+        '/PaginaResultadoEntrevistas': (context)=>PaginaResultadoEntrevistas(),
+        '/PaginaCartilhaPdf': (context)=> PaginaCartilhaPdf(),
+        '/LinhaDoTempo': (context)=> LinhaDoTempo()
 
-        //PaginaResultadoEntrevistas
+        //LinhaDoTempo
 
       },
       initialRoute: '/PaginaInicial',

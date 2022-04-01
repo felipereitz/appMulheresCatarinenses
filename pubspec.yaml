@@ -42,6 +42,10 @@ dependencies:
   hive_generator: ^1.1.1
   path_provider: ^2.0.8
   syncfusion_flutter_charts: ^19.4.54
+  pdfx: ^1.0.0
+  syncfusion_flutter_pdfviewer: ^19.4.56-beta
+  open_file: ^3.2.1
+
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +74,8 @@ flutter:
   assets:
     - assets/imagens/
     - assets/Dados/
+    - assets/Pdfs/
+    - assets/pdfsImagens/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

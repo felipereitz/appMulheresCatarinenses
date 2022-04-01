@@ -12,35 +12,45 @@ class PaginaInicial extends StatelessWidget {
       body: SingleChildScrollView(
         child: Consumer<PaginaInicialProvider>(
           builder: (BuildContext context, value, Widget? child) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 100,
-                ),
+            return Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 20,),
 
-                itemListaPaginas(context,
-                    'Dados violência contra mulher em SC',
-                    (Colors.greenAccent[100])!,
-                    '/PaginaDadosViolencia'),
+                  itemListaPaginas(context,
+                      'Linha do tempo: Direito das Mulheres no Brasil',
+                      (Colors.blueGrey[100])!,
+                      '/LinhaDoTempo'),
 
-                itemListaPaginas(context,
-                    'Resultado pesquisa com mulheres catarinenses',
-                    (Colors.red[100])!,
-                    '/PaginaResultadoEntrevistas'),
+                  itemListaPaginas(context,
+                      'Cartilhas Violência Contra A Mulher',
+                      (Colors.purpleAccent[100])!,
+                      '/PaginaCartilhaPdf'),
 
-                itemListaPaginas(context,
-                    'Como seria um Mundo Ideal para as Mulheres?',
-                    (Colors.blue[100])!,
-                    '/PaginaComoDeveriaSer'),
+                  itemListaPaginas(context,
+                      'Dados violência contra mulher em SC',
+                      (Colors.greenAccent[100])!,
+                      '/PaginaDadosViolencia'),
 
-                itemListaPaginas(context,
-                    'Colaboradores',
-                    (Colors.orangeAccent[100])!,
-                    '/PaginaColaboradores'),
+                  itemListaPaginas(context,
+                      'Resultado pesquisa com mulheres catarinenses',
+                      (Colors.red[100])!,
+                      '/PaginaResultadoEntrevistas'),
+
+                  itemListaPaginas(context,
+                      'Como seria um Mundo Ideal para as Mulheres?',
+                      (Colors.blue[100])!,
+                      '/PaginaComoDeveriaSer'),
+
+                  itemListaPaginas(context,
+                      'Colaboradores',
+                      (Colors.orangeAccent[100])!,
+                      '/PaginaColaboradores'),
 
 
-              ],
+                ],
+              ),
             );
           },
         ),
